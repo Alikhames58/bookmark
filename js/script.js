@@ -1,7 +1,9 @@
 let bookmarkNameInput = document.getElementById('bookmarkName')
 let bookmarkUrlInput = document.getElementById('bookmarkUrl')
-
 let siteList = JSON.parse(localStorage.getItem('site')) || []
+document.addEventListener('DOMContentLoaded', function () {
+    displayData()
+})
 function addSite() {
     if (validationSiteName() && validationUrlSite()) {
         let site = {
