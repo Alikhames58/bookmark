@@ -1,10 +1,10 @@
 let bookmarkNameInput = document.getElementById('bookmarkName')
 let bookmarkUrlInput = document.getElementById('bookmarkUrl')
 let siteList = []
-// if (localStorage.getItem !== null) {
-//     siteList = JSON.parse(localStorage.getItem('site'))
-//     displayData()
-// }
+if (localStorage.getItem !== null) {
+    siteList = JSON.parse(localStorage.getItem('site'))
+    displayData()
+}
 function addSite() {
     if (validationSiteName() && validationUrlSite()) {
         let site = {
