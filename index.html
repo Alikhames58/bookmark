@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container d-flex justify-content-center align-items-center flex-column">
+            <h1>Bookmarker</h1>
+            <div
+                class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2> <i class="fa-solid fa-bookmark"></i> Bookmark Yoru favorite Sites <i
+                        class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center"">
+                    <label for = " bookmarkName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                    <input oninput="validationSiteName()" type="text" class="form-control" placeholder="Bookmark Name"
+                        id="bookmarkName">
+                    <p id="msgName" class="alert alert-danger d-none">it must start with a letter, be 3 to 20 character
+                        long, and can only containe letters, numbers, or underscores.</p>
+                </div>
+                <div class="site-url w-100 d-flex flex-column justify-content-center"">
+                    <label for = " bookmarkUrl"><i class="fa-solid fa-link pe-2"></i>Site Url</label>
+                    <input oninput="validationUrlSite()" type="text" class="form-control" placeholder="Website URL"
+                        id="bookmarkUrl">
+                    <p id="msgUrl" class="alert alert-danger d-none">it must start with a https://</p>
+                </div>
+                <button onclick="addSite()" class="btn btn-danger">Sumbit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyData">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
