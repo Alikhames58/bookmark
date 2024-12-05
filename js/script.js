@@ -4,6 +4,8 @@ let siteList = []
 if (localStorage.getItem !== null) {
     siteList = JSON.parse(localStorage.getItem('site'))
     displayData()
+} else {
+    localStorage.setItem('site', JSON.stringify(siteList))
 }
 function addSite() {
     if (validationSiteName() && validationUrlSite()) {
