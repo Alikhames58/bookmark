@@ -59,7 +59,7 @@ function clearData() {
     bookmarkUrlInput.classList.remove('is-valid')
 }
 function validationSiteName() {
-    let regex = /^[a-zA-Z]{2,19}$/
+    let regex = /^[a-zA-Z0-9 _]{2,19}$/
     let text = bookmarkNameInput.value
     let msgName = document.getElementById('msgName')
     if (regex.test(text)) {
